@@ -18,27 +18,26 @@
     <div class="row justify-content-center">
         <div class="col-lg-8">
 
-            <!-- CARD CON COLOR DINÁMICO -->
-            <div class="card shadow-lg border-3"
-                 th:classappend="' border-' + ${cardColor}">
+            <!-- CARD CON COLOR DINÁMICO REAL -->
+            <div class="card shadow-lg border-0 text-white"
+                 th:classappend="' bg-' + ${cardColor}">
 
                 <div class="card-body text-center">
 
                     <!-- FOTO -->
                     <img
                             th:src="${user.profilePictureUrl}"
-                            class="rounded-circle mb-3"
+                            class="rounded-circle mb-3 border border-light"
                             width="120"
                             height="120"
                             alt="Profile Picture"
                     />
 
                     <!-- NAV TABS -->
-                    <ul class="nav nav-tabs justify-content-center" role="tablist">
+                    <ul class="nav nav-tabs justify-content-center mb-3">
 
                         <li class="nav-item">
-                            <button
-                                    class="nav-link active"
+                            <button class="nav-link active"
                                     data-bs-toggle="tab"
                                     data-bs-target="#nameTab"
                                     type="button">
@@ -47,8 +46,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <button
-                                    class="nav-link"
+                            <button class="nav-link"
                                     data-bs-toggle="tab"
                                     data-bs-target="#emailTab"
                                     type="button">
@@ -57,8 +55,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <button
-                                    class="nav-link"
+                            <button class="nav-link"
                                     data-bs-toggle="tab"
                                     data-bs-target="#githubTab"
                                     type="button">
@@ -91,7 +88,7 @@
                     </ul>
 
                     <!-- CONTENIDO DE TABS -->
-                    <div class="tab-content mt-4">
+                    <div class="tab-content mt-3">
 
                         <div class="tab-pane fade show active" id="nameTab">
                             <h5 th:text="${user.name}"></h5>
@@ -104,7 +101,8 @@
                         <div class="tab-pane fade" id="githubTab">
                             <a th:if="${user.github != null}"
                                th:href="${user.github}"
-                               target="_blank">
+                               target="_blank"
+                               class="text-white fw-bold">
                                 Ir a GitHub
                             </a>
                             <span th:if="${user.github == null}">
@@ -112,47 +110,17 @@
                             </span>
                         </div>
 
-                        <!-- 10 DATOS EXTRA -->
-
-                        <div class="tab-pane fade" id="favFood">
-                            <h5>Tacos al pastor</h5>
-                        </div>
-
-                        <div class="tab-pane fade" id="children">
-                            <h5>No</h5>
-                        </div>
-
-                        <div class="tab-pane fade" id="color">
-                            <h5>Morado</h5>
-                        </div>
-
-                        <div class="tab-pane fade" id="hobby">
-                            <h5>Dibujar</h5>
-                        </div>
-
-                        <div class="tab-pane fade" id="sport">
-                            <h5>Ninguno</h5>
-                        </div>
-
-                        <div class="tab-pane fade" id="city">
-                            <h5>Chihuahua</h5>
-                        </div>
-
-                        <div class="tab-pane fade" id="career">
-                            <h5>Ingeniería en Ciencias de la Computacion</h5>
-                        </div>
-
-                        <div class="tab-pane fade" id="university">
-                            <h5>UACH</h5>
-                        </div>
-
-                        <div class="tab-pane fade" id="age">
-                            <h5>20</h5>
-                        </div>
-
-                        <div class="tab-pane fade" id="pet">
-                            <h5>Gato</h5>
-                        </div>
+                        <!-- DATOS EXTRA -->
+                        <div class="tab-pane fade" id="favFood"><h5>Tacos al pastor</h5></div>
+                        <div class="tab-pane fade" id="children"><h5>No</h5></div>
+                        <div class="tab-pane fade" id="color"><h5>Morado</h5></div>
+                        <div class="tab-pane fade" id="hobby"><h5>Dibujar</h5></div>
+                        <div class="tab-pane fade" id="sport"><h5>Ninguno</h5></div>
+                        <div class="tab-pane fade" id="city"><h5>Chihuahua</h5></div>
+                        <div class="tab-pane fade" id="career"><h5>Ingeniería en Ciencias de la Computacion</h5></div>
+                        <div class="tab-pane fade" id="university"><h5>UACH</h5></div>
+                        <div class="tab-pane fade" id="age"><h5>20</h5></div>
+                        <div class="tab-pane fade" id="pet"><h5>Gato</h5></div>
 
                     </div>
 

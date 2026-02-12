@@ -12,7 +12,7 @@ public class mainController {
 	  @GetMapping("/")
 	  public String home(
 	      Model model) {
-	    model.addAttribute("message", "Hey estas en la pantalla principal, usa /perfile!");
+	    model.addAttribute("message", "Hey estas en la pantalla principal, usa /profile!");
 	    return "index";
 	  }
 
@@ -37,7 +37,7 @@ public class mainController {
 
 	 		    model.addAttribute("user", user);
 
-	 		    String cardColor = "primary";
+	 		    String cardColor = "secondary";
 	 		    model.addAttribute("cardColor", cardColor);
 
 	 		    return "profile";
