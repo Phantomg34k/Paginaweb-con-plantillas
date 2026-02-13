@@ -39,6 +39,16 @@ public class mainController {
 
 	 		    String cardColor = "secondary";
 	 		    model.addAttribute("cardColor", cardColor);
+	 		   user.setFavoriteFood("Tacos al pastor");
+	 		  user.setChildren("No");
+	 		  user.setFavoriteColor("Morado");
+	 		  user.setHobby("Dibujar");
+	 		  user.setSport("Ninguno");
+	 		  user.setCity("Chihuahua");
+	 		  user.setCareer("Ingeniería en Ciencias de la Computación");
+	 		  user.setUniversity("UACH");
+	 		  user.setAge(20);
+	 		  user.setPet("Gato");
 
 	 		    return "profile";
 	 		}

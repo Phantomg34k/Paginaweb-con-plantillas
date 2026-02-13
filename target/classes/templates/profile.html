@@ -18,7 +18,7 @@
     <div class="row justify-content-center">
         <div class="col-lg-8">
 
-            <!-- CARD CON COLOR DINÁMICO REAL -->
+            <!-- CARD CON COLOR DINÁMICO -->
             <div class="card shadow-lg border-0 text-white"
                  th:classappend="' bg-' + ${cardColor}">
 
@@ -110,17 +110,47 @@
                             </span>
                         </div>
 
-                        <!-- DATOS EXTRA -->
-                        <div class="tab-pane fade" id="favFood"><h5>Tacos al pastor</h5></div>
-                        <div class="tab-pane fade" id="children"><h5>No</h5></div>
-                        <div class="tab-pane fade" id="color"><h5>Morado</h5></div>
-                        <div class="tab-pane fade" id="hobby"><h5>Dibujar</h5></div>
-                        <div class="tab-pane fade" id="sport"><h5>Ninguno</h5></div>
-                        <div class="tab-pane fade" id="city"><h5>Chihuahua</h5></div>
-                        <div class="tab-pane fade" id="career"><h5>Ingeniería en Ciencias de la Computacion</h5></div>
-                        <div class="tab-pane fade" id="university"><h5>UACH</h5></div>
-                        <div class="tab-pane fade" id="age"><h5>20</h5></div>
-                        <div class="tab-pane fade" id="pet"><h5>Gato</h5></div>
+                        <!-- DATOS EXTRA DINÁMICOS -->
+
+                        <div class="tab-pane fade" id="favFood">
+                            <h5 th:text="${user.favoriteFood}"></h5>
+                        </div>
+
+                        <div class="tab-pane fade" id="children">
+                            <h5 th:text="${user.children}"></h5>
+                        </div>
+
+                        <div class="tab-pane fade" id="color">
+                            <h5 th:text="${user.favoriteColor}"></h5>
+                        </div>
+
+                        <div class="tab-pane fade" id="hobby">
+                            <h5 th:text="${user.hobby}"></h5>
+                        </div>
+
+                        <div class="tab-pane fade" id="sport">
+                            <h5 th:text="${user.sport}"></h5>
+                        </div>
+
+                        <div class="tab-pane fade" id="city">
+                            <h5 th:text="${user.city}"></h5>
+                        </div>
+
+                        <div class="tab-pane fade" id="career">
+                            <h5 th:text="${user.career}"></h5>
+                        </div>
+
+                        <div class="tab-pane fade" id="university">
+                            <h5 th:text="${user.university}"></h5>
+                        </div>
+
+                        <div class="tab-pane fade" id="age">
+                            <h5 th:text="${user.age}"></h5>
+                        </div>
+
+                        <div class="tab-pane fade" id="pet">
+                            <h5 th:text="${user.pet}"></h5>
+                        </div>
 
                     </div>
 
